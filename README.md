@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The Wild Oasis 🏡
+
+A cabin booking website built with **Next.js (App Router)**, **Supabase**, and **Tailwind CSS**. Users can browse cabins and view detailed info for each one.
+
+## Tech Stack
+
+- Next.js (App Router)
+- Supabase (database + storage)
+- Tailwind CSS
+- Heroicons
+
+## Features
+
+- Dynamic cabin detail pages (`/cabins/[cabinId]`)
+- Optimized images with `next/image`
+- Optimized fonts with `next/font/google`
+- Loading and error states for each route
+- Custom 404 page for missing cabins
+- Fully responsive design
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
+\```bash
+git clone <your-repo-url>
+cd wild-oasis
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Create a `.env.local` file:
 
-## Learn More
+\```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_KEY=your_supabase_anon_key
+\```
 
-To learn more about Next.js, take a look at the following resources:
+## What I Learned
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js App Router file conventions (`loading.js`, `error.js`, `not-found.js`)
+- Server vs Client Components
+- Handling dynamic route params correctly
+- Optimizing images and fonts with Next.js
+- Building responsive layouts with Tailwind
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Roadmap
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [ ] Booking/reservation flow
+- [ ] Authentication
+- [ ] Payment integration
