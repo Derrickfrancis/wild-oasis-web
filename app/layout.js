@@ -12,7 +12,7 @@ export const metadata = {
   description: "A website for The Wild Oasis, a nature retreat.",
 };
 
-export default function RooTtLayout({ children }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
@@ -20,7 +20,7 @@ export default function RooTtLayout({ children }) {
       >
         <Header />
 
-        <div className="flex-1 px-4 sm:px-8 py-8 sm:py-12 grid">
+        <div className="flex-1 px-4 sm:px-6 md:px-8 lg:px-10 py-6 sm:py-8 md:py-10 lg:py-12">
           <main className="max-w-7xl mx-auto w-full">{children}</main>
         </div>
       </body>
