@@ -7,9 +7,9 @@ export const metadata = {
 
 export default function AccountLayout({ children }) {
   return (
-    <div className="grid grid-cols-[3.5rem_1fr] sm:grid-cols-[16rem_1fr] gap-3 sm:gap-12 h-full">
+    <div className="flex h-full gap-3 sm:gap-12 overflow-hidden">
       <SideNavigation />
-      <div className="py-1">{children}</div>
+      <div className="flex-1 overflow-y-auto py-1">{children}</div>
     </div>
   );
 }

@@ -16,12 +16,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${josefin.className} bg-primary-950 text-primary-100 min-h-screen flex flex-col antialiased relative`}
+        className={`${josefin.className} bg-primary-950 text-primary-100 h-screen flex flex-col antialiased relative overflow-hidden`}
       >
         <Header />
 
-        <div className="flex-1 px-4 sm:px-6 md:px-8 lg:px-10 py-6 sm:py-8 md:py-10 lg:py-12">
-          <main className="max-w-7xl mx-auto w-full">{children}</main>
+        <div className="flex-1 overflow-y-auto px-4 sm:px-6 md:px-8 lg:px-10 py-6 sm:py-8 md:py-10 lg:py-12">
+          <main className="max-w-7xl mx-auto w-full h-full">{children}</main>
         </div>
       </body>
     </html>

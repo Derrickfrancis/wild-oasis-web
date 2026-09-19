@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import {
   CalendarDaysIcon,
@@ -26,13 +29,15 @@ const navLinks = [
 ];
 
 function SideNavigation() {
+  const pathName = usePathname();
+
   return (
-    <nav className="border-r border-primary-900">
-      <ul className="flex flex-col gap-1 sm:gap-2 h-full text-sm sm:text-lg">
+    <nav className="border-r border-primary-900 h-full flex flex-col w-14 sm:w-64 shrink-0">
+      <ul className="flex flex-col gap-1 sm:gap-2 flex-1 text-sm sm:text-lg">
         {navLinks.map((link) => (
           <li key={link.name}>
             <Link
-              className="py-2 px-2 sm:py-3 sm:px-5 hover:bg-primary-900 hover:text-primary-100 transition-colors flex items-center gap-2 sm:gap-4 font-semibold text-primary-200"
+              className={`py-2 px-2 sm:py-3 sm:px-5 hover:bg-primary-900 hover:text-primary-100 transition-colors flex items-center gap-2 sm:gap-4 font-semibold text-primary-200 ${pathName === link.href ? "bg-primary-900" : ""}`}
               href={link.href}
             >
               {link.icon}
